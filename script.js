@@ -2,6 +2,7 @@
 let score = 0;
 
 function showScore(){
+
 //スコア表示の処理をここに記述
     if(score === 3) {
         document.getElementById('score-message').innerHTML = `${score}点！すばらしい！`;
@@ -26,10 +27,12 @@ function answerQuiz1(){
     
     if(quiz_1.answer.value === 'b') {
         console.log('正解です！');
-        score = score + 1;
+        score ++;
         console.log(score);
-    } else {
+    } else if(quiz_1.answer.value === 'a' || quiz_1.answer.value === 'c') {
         console.log('はずれです');
+    } else {
+        alert('1問目の選択肢を選んでください');
     }
 }
 
@@ -39,10 +42,12 @@ function answerQuiz2(){
 
     if(quiz_2.answer.value === 'a') {
         console.log('正解です！');
-        score = score + 1;
+        score ++;
         console.log(score);
-    } else {
+    } else if(quiz_2.answer.value === 'b' || quiz_2.answer.value === 'c') {
         console.log('はずれです');
+    } else {
+        alert('2問目の選択肢を選んでください');
     }
 }
 
@@ -52,10 +57,12 @@ function answerQuiz3(){
 
     if(quiz_3.answer.value === 'c') {
         console.log('正解です！');
-        score = score + 1;
+        score ++;
         console.log(score);
-    } else {
+    } else if(quiz_3.answer.value === 'a' || quiz_3.answer.value === 'b') {
         console.log('はずれです');
+    } else {
+        alert('3問目の選択肢を選んでください');
     }
 }
 
